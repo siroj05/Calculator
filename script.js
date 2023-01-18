@@ -10,22 +10,21 @@ btn.forEach(m => {
     switch(e.target.innerText){
       case 'C' : 
         displayIn.innerText = '';
-        displayOut.innerText = '';
         break;
       case '=' :
         try{
-          displayOut.innerText = eval(displayIn.innerText);
-          displayIn.innerText = '';
+          displayIn.innerText = eval(displayIn.innerText);
+          console.log('ok');
         }
         catch{
-          displayOut.innerText = 'ERROR!'
-          displayIn.innerText = '';
+          displayIn.innerText = 'ERROR!';
         }
         
         break;
       default:
+        console.log('ok2');
         displayIn.innerText += e.target.innerText;
-        displayOut.innerText = ''
+        
     }
   })
 })
